@@ -43,6 +43,9 @@ class BaseLEDDriver {
   typename _LEDDriverBlueprint::LEDCountType getLedIndex(uint8_t key_offset) {
     return -1;
   }
+
+ protected:
+  typedef _LEDDriverBlueprint Blueprint_;
 };
 
 }

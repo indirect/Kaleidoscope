@@ -75,6 +75,9 @@ class FocusSerial : public kaleidoscope::Plugin {
   void read(uint16_t &u16) {
     u16 = KeyboardHardware.serialPort().parseInt();
   }
+  void read(typename HARDWARE_IMPLEMENTATION::LEDDriverProps::LEDCountType &u) {
+    u = KeyboardHardware.serialPort().parseInt();
+  }
 
   bool isEOL() {
     return KeyboardHardware.serialPort().peek() == '\n';

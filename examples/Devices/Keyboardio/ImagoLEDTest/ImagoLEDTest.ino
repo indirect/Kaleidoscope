@@ -1,5 +1,6 @@
 #include<avr/pgmspace.h>
 #include <Arduino.h>
+#include "Kaleidoscope.h"
 
 extern "C" {
 #include "kaleidoscope/hardware/keyboardio/twi.h"

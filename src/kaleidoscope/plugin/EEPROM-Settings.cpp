@@ -50,6 +50,7 @@ EventHandlerResult EEPROMSettings::onSetup() {
      * encounter a firmware with no version defined, we'll set sensible
      * defaults. */
     KeyboardHardware.storage().put(0, settings_);
+    KeyboardHardware.storage().commit();
   }
   return EventHandlerResult::OK;
 }
@@ -147,6 +148,7 @@ uint16_t EEPROMSettings::used(void) {
 
 void EEPROMSettings::update(void) {
   KeyboardHardware.storage().put(0, settings_);
+  KeyboardHardware.storage().commit();
   is_valid_ = true;
 }
 

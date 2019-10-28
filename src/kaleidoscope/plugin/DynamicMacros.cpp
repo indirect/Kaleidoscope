@@ -233,6 +233,7 @@ EventHandlerResult DynamicMacros::onFocusEvent(const char *command) {
 
         KeyboardHardware.storage().update(storage_base_ + pos++, b);
       }
+      KeyboardHardware.storage().commit();
       updateDynamicMacroCache();
     }
   }

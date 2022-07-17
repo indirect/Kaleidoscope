@@ -282,6 +282,7 @@ KEYMAPS(
   // Meta key aliases
   #define CAG(k) LALT(LCTRL(LGUI((k))))
   #define Key_Cag LALT(LCTRL(Key_LeftGui))
+  #define CG(k) LCTRL(LGUI((k)))
 
   // Edit this keymap to make a custom layout
   [PRIMARY] = KEYMAP_STACKED(
@@ -302,7 +303,7 @@ KEYMAPS(
 
   [LFN] =  KEYMAP_STACKED (
     ___,              Key_F1,                 Key_F2,               Key_F3,              Key_F4,                Key_F5,                  ___,
-    Key_Tab,          ___,                    LGUI(Key_LeftCurly),  CAG(Key_UpArrow),    LGUI(Key_RightCurly),  ___,                     ___,
+    Key_Tab,          CG(Key_LeftArrow),      LGUI(Key_LeftCurly),  CAG(Key_UpArrow),    LGUI(Key_RightCurly),  CG(Key_RightArrow),      ___,
     Key_PageUp,       LGUI(Key_LeftBracket),  CAG(Key_LeftArrow),   CAG(Key_DownArrow),  CAG(Key_RightArrow),   LGUI(Key_RightBracket),
     Key_PageDown,     ___,                    LGUI(Key_Tilde),      CAG(Key_M),          LGUI(Key_Backtick),    ___,                     LALT(Key_Delete),
     ___,              Key_Delete,             ___,                  ___,

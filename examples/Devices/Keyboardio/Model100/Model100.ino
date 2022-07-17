@@ -302,17 +302,17 @@ KEYMAPS(
   ),
 
   [LFN] =  KEYMAP_STACKED (
-    ___,              Key_F1,                 Key_F2,               Key_F3,              Key_F4,                Key_F5,                  ___,
-    Key_Tab,          CG(Key_LeftArrow),      LGUI(Key_LeftCurly),  CAG(Key_UpArrow),    LGUI(Key_RightCurly),  CG(Key_RightArrow),      ___,
-    Key_PageUp,       LGUI(Key_LeftBracket),  CAG(Key_LeftArrow),   CAG(Key_DownArrow),  CAG(Key_RightArrow),   LGUI(Key_RightBracket),
-    Key_PageDown,     ___,                    LGUI(Key_Tilde),      CAG(Key_M),          LGUI(Key_Backtick),    ___,                     LALT(Key_Delete),
-    ___,              Key_Delete,             ___,                  ___,
+    ___,           Key_F1,                 Key_F2,               Key_F3,              Key_F4,                Key_F5,                  ___,
+    Key_Tab,       CG(Key_LeftArrow),      LGUI(Key_LeftCurly),  CAG(Key_UpArrow),    LGUI(Key_RightCurly),  CG(Key_RightArrow),      ___,
+    Key_PageUp,    LGUI(Key_LeftBracket),  CAG(Key_LeftArrow),   CAG(Key_DownArrow),  CAG(Key_RightArrow),   LGUI(Key_RightBracket),
+    Key_PageDown,  ___,                    LGUI(Key_Tilde),      CAG(Key_M),          LGUI(Key_Backtick),    ___,                     LALT(Key_Delete),
+    ___,           Key_Delete,             ___,                  ___,
     ___,
 
     ___,              Key_F6,     Key_F7,         Key_F8,          Key_F9,           Key_F10,           Key_F11,
     Key_KeypadEnter,  Key_Bang,   Key_At,         Key_Hash,        Key_Dollar,       Key_Percent,       Key_F12,
-    /*nokey*/         Key_Caret,  Key_And,        Key_Star,        Key_Lparen,       Key_Rparen,        ___,
-    ___,              ___,        Key_LeftCurly,  Key_RightCurly,  Key_LeftBracket,  Key_RightBracket,  ___,
+    /*nokey*/         Key_Caret,  Key_And,        Key_Star,        Key_Lparen,       Key_Rparen,        Key_PageUp,
+    ___,              ___,        Key_LeftCurly,  Key_RightCurly,  Key_LeftBracket,  Key_RightBracket,  Key_PageDown,
     ___,              ___,        Key_Enter,      ___,
     ___
   ),

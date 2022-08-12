@@ -325,11 +325,11 @@ KEYMAPS(
     ___,       Key_Delete,  ___,     ___,
     ___,
 
-    ___,              Key_F6,         Key_F7,          Key_F8,         Key_F9,           Key_F10,           Key_F11,
-    Key_KeypadEnter,  Key_LeftCurly,  Key_RightCurly,  Key_UpArrow,    Key_LeftBracket,  Key_RightBracket,  Key_F12,
-    /*nokey*/         ___,            Key_LeftArrow,   Key_DownArrow,  Key_RightArrow,   ___,               Key_Underscore,
-    ___,              Key_Mute,       Key_VolDown,     Key_VolUp,      Key_BriDown,      Key_BriUp,         Key_Plus,
-    ___,              ___,            Key_Enter,       ___,
+    ___,                     Key_F6,                     Key_F7,          Key_F8,         Key_F9,           Key_F10,                Key_F11,
+    Key_KeypadEnter,         Key_LeftCurly,              Key_RightCurly,  Key_UpArrow,    Key_LeftBracket,  Key_RightBracket,       Key_F12,
+    /*nokey*/                Consumer_ScanPreviousTrack, Key_LeftArrow,   Key_DownArrow,  Key_RightArrow,   Consumer_ScanNextTrack, Key_Underscore,
+    Consumer_PlaySlashPause, Key_Mute,                   Key_VolDown,     Key_VolUp,      Key_BriDown,      Key_BriUp,              Key_Plus,
+    ___,                     ___,                        Key_Enter,       ___,
     ___
    ),
 

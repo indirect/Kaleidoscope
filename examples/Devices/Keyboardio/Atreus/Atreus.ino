@@ -53,6 +53,24 @@ enum {
 #define Key_Star        LSHIFT(Key_8)
 #define Key_Plus        LSHIFT(Key_Equals)
 
+// Other symbol aliases
+#define Key_Tilde LSHIFT(Key_Backtick)
+#define Key_Underscore LSHIFT(Key_Minus)
+#define Key_Plus LSHIFT(Key_Equals)
+#define Key_LeftCurly Key_LeftCurlyBracket
+#define Key_RightCurly Key_RightCurlyBracket
+
+// OS controls
+#define Key_VolDown Consumer_VolumeDecrement
+#define Key_VolUp   Consumer_VolumeIncrement
+#define Key_BriDown Key_F14
+#define Key_BriUp   Key_F15
+
+// Meta key aliases
+#define CAG(k) LALT(LCTRL(LGUI((k))))
+#define Key_Cag LALT(LCTRL(Key_LeftGui))
+#define CG(k) LCTRL(LGUI((k)))
+
 enum {
   DVORAK,
   FUN,
@@ -89,15 +107,15 @@ KEYMAPS(
 
   [UPPER] = KEYMAP_STACKED
   (
-       Key_Insert            ,Key_Home                 ,Key_UpArrow   ,Key_End        ,Key_PageUp
-      ,Key_Delete            ,Key_LeftArrow            ,Key_DownArrow ,Key_RightArrow ,Key_PageDown
-      ,M(MACRO_VERSION_INFO) ,Consumer_VolumeIncrement ,XXX           ,XXX            ,___ ,___
-      ,MoveToLayer(DVORAK)   ,Consumer_VolumeDecrement ,___           ,___            ,___ ,___
+       Key_Insert            ,Key_Home           ,CAG(Key_UpArrow)   ,Key_End             ,Key_PageUp
+      ,Key_Delete            ,CAG(Key_LeftArrow) ,CAG(Key_DownArrow) ,CAG(Key_RightArrow) ,Key_PageDown
+      ,M(MACRO_VERSION_INFO) ,Key_Mute           ,Key_VolDown        ,Key_VolUp           ,Key_BriDown   ,Key_BriUp
+      ,MoveToLayer(DVORAK)   ,___                ,___                ,___                 ,___           ,___
 
-                ,Key_UpArrow   ,Key_F7              ,Key_F8          ,Key_F9         ,Key_F10
-                ,Key_DownArrow ,Key_F4              ,Key_F5          ,Key_F6         ,Key_F11
-      ,___      ,XXX           ,Key_F1              ,Key_F2          ,Key_F3         ,Key_F12
-      ,___      ,___           ,MoveToLayer(DVORAK) ,Key_PrintScreen ,Key_ScrollLock ,Consumer_PlaySlashPause
+                ,Key_Home ,Key_F7              ,Key_F8          ,Key_F9         ,Key_F10
+                ,Key_End  ,Key_F4              ,Key_F5          ,Key_F6         ,Key_F11
+      ,___      ,XXX      ,Key_F1              ,Key_F2          ,Key_F3         ,Key_F12
+      ,___      ,___      ,MoveToLayer(DVORAK) ,Key_PrintScreen ,Key_ScrollLock ,Consumer_PlaySlashPause
    )
 )
 // clang-format on

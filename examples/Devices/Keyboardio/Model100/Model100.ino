@@ -92,7 +92,7 @@
 #include "Kaleidoscope-DynamicMacros.h"
 
 // Support for SpaceCadet keys
-#include "Kaleidoscope-SpaceCadet.h"
+// #include "Kaleidoscope-SpaceCadet.h"
 
 // Support for editable layer names
 #include "Kaleidoscope-LayerNames.h"
@@ -621,8 +621,8 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // SpaceCadet can turn your shifts into parens on tap, while keeping them as
   // Shifts when held. SpaceCadetConfig lets Chrysalis configure some aspects of
   // the plugin.
-  SpaceCadet,
-  SpaceCadetConfig,
+  // SpaceCadet,
+  // SpaceCadetConfig,
 
   // Enables the "Sticky" behavior for modifiers, and the "Layer shift when
   // held" functionality for layer keys.
@@ -816,7 +816,7 @@ void setup() {
   // To avoid any surprises, SpaceCadet is turned off by default. However, it
   // can be permanently enabled via Chrysalis, so we should only disable it if
   // no configuration exists.
-  SpaceCadetConfig.disableSpaceCadetIfUnconfigured();
+  // SpaceCadetConfig.disableSpaceCadetIfUnconfigured();
 
   // Editable layer names are stored in EEPROM too, and we reserve 16 bytes per
   // layer for them. We need one extra byte per layer for bookkeeping, so we

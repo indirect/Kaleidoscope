@@ -313,7 +313,7 @@ KEYMAPS(
     Key_KeypadEnter,  Key_Bang,   Key_At,         Key_Hash,        Key_Dollar,       Key_Percent,       Key_F12,
     /*nokey*/         Key_Caret,  Key_And,        Key_Star,        Key_Lparen,       Key_Rparen,        Key_PageUp,
     ___,              ___,        Key_LeftCurly,  Key_RightCurly,  Key_LeftBracket,  Key_RightBracket,  Key_PageDown,
-    ___,              ___,        Key_Enter,      ___,
+    ___,              ___,        Key_Spacebar,      ___,
     ___
   ),
 

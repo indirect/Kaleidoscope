@@ -318,11 +318,11 @@ KEYMAPS(
   ),
 
   [RFN] =  KEYMAP_STACKED (
-    ___,       Key_F1,      Key_F2,  Key_F3,  Key_F4,  Key_F5,  ___,
-    Key_Tab,   Key_1,       Key_2,   Key_3,   Key_4,   Key_5,   ___,
-    Key_Home,  Key_6,       Key_7,   Key_8,   Key_9,   Key_0,
-    Key_End,   ___,         ___,     ___,     ___,     ___,     LALT(Key_Delete),
-    ___,       Key_Delete,  ___,     ___,
+    ___,      Key_F1,             Key_F2, Key_F3, Key_F4, Key_F5,             ___,
+    Key_Tab,  Key_KeypadDivide,   Key_7,  Key_8,  Key_9,  Key_KeypadSubtract, Key_KeypadEnter,
+    Key_Home, Key_KeypadMultiply, Key_4,  Key_5,  Key_6,  Key_KeypadAdd,
+    Key_End,  Key_0,              Key_1,  Key_2,  Key_3,  Key_Period,         LALT(Key_Delete),
+    ___,      Key_Delete,         ___,    ___,
     ___,
 
     ___,                     Key_F6,                     Key_F7,          Key_F8,         Key_F9,           Key_F10,                Key_F11,

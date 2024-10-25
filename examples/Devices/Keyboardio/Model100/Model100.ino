@@ -174,6 +174,7 @@ enum {
   MOUSE,
   NUMPAD,
   FUNCTION,
+  QWERTY,
 };  // layers
 
 
@@ -302,7 +303,7 @@ KEYMAPS(
   ),
 
   [LFN] =  KEYMAP_STACKED (
-    ___,           Key_F1,                 Key_F2,               Key_F3,              Key_F4,                Key_F5,                  ___,
+    ___,           Key_F1,                 Key_F2,               Key_F3,              Key_F4,                Key_F5,                  LockLayer(QWERTY),
     Key_Tab,       CG(Key_LeftArrow),      LGUI(Key_LeftCurly),  CAG(Key_UpArrow),    LGUI(Key_RightCurly),  CG(Key_RightArrow),      ___,
     Key_PageUp,    LGUI(Key_LeftBracket),  CAG(Key_LeftArrow),   CAG(Key_DownArrow),  CAG(Key_RightArrow),   LGUI(Key_RightBracket),
     Key_PageDown,  ___,                    LGUI(Key_Tilde),      CAG(Key_M),          LGUI(Key_Backtick),    ___,                     LALT(Key_Delete),
@@ -318,7 +319,7 @@ KEYMAPS(
   ),
 
   [RFN] =  KEYMAP_STACKED (
-    ___,      Key_F1,             Key_F2, Key_F3, Key_F4, Key_F5,             ___,
+    ___,      Key_F1,             Key_F2, Key_F3, Key_F4, Key_F5,             LockLayer(NUMPAD),
     Key_Tab,  Key_KeypadDivide,   Key_7,  Key_8,  Key_9,  Key_KeypadSubtract, Key_KeypadEnter,
     Key_Home, Key_KeypadMultiply, Key_4,  Key_5,  Key_6,  Key_KeypadAdd,
     Key_End,  Key_0,              Key_1,  Key_2,  Key_3,  Key_Period,         LALT(Key_Delete),
@@ -334,20 +335,20 @@ KEYMAPS(
    ),
 
   [QWERTY] = KEYMAP_STACKED (
-    ___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
-    Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
-    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,
-    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
-    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
+    Key_Backtick,  Key_1, Key_2, Key_3, Key_4, Key_5, LockLayer(PRIMARY),
+    Key_Backtick,  Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
+    CTL_T(Escape), Key_A, Key_S, Key_D, Key_F, Key_G,
+    Key_LeftShift, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
+    Key_LeftShift, Key_Backspace, Key_LeftGui, Key_LeftAlt,
     ShiftToLayer(LFN),
 
-    M(MACRO_ANY),  Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
-    Key_Enter,     Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
-                   Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
-    Key_RightAlt,  Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
-    Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
-    ShiftToLayer(RFN)),
-  
+    ___, Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_Backslash,
+    Key_Enter,    Key_Y, Key_U, Key_I,     Key_O,      Key_P,         Key_Equals,
+                  Key_H, Key_J, Key_K,     Key_L,      Key_Semicolon, Key_Quote,
+    Key_RightAlt, Key_N, Key_M, Key_Comma, Key_Period, Key_Slash,     Key_Minus,
+    Key_RightAlt, Key_RightGui, Key_Spacebar, Key_RightShift,
+    ShiftToLayer(RFN)
+  ),
 
   [MOUSE] =  KEYMAP_STACKED (
     ___,                ___,  ___,            ___,            ___,            ___,              ___,
@@ -381,10 +382,10 @@ KEYMAPS(
    ___, ___, ___, ___,
    ___,
 
-   M(MACRO_VERSION_INFO),  ___, Key_7, Key_8,      Key_9,              Key_KeypadSubtract, ___,
-   ___,                    ___, Key_4, Key_5,      Key_6,              Key_KeypadAdd,      ___,
-                           ___, Key_1, Key_2,      Key_3,              Key_Equals,         ___,
-   ___,                    ___, Key_0, Key_Period, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter,
+   ___, ___, Key_7, Key_8,      Key_9,              Key_KeypadSubtract, ___,
+   ___, ___, Key_4, Key_5,      Key_6,              Key_KeypadAdd,      ___,
+        ___, Key_1, Key_2,      Key_3,              Key_Equals,         ___,
+   ___, ___, Key_0, Key_Period, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter,
    ___, ___, ___, ___,
    ___),
 
